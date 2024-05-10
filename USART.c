@@ -7,7 +7,7 @@
 void USART_init(void){
     UBRRH = UBRR_VALUE; //Setting the baud rate
     UBRRL = UBRR_VALUE; //Setting the baud rate
-    UCSRC = _BV(USBS) | _BV(UCSZ1) | _BV(UCSZ0); //8 bits of data, 2 stop bits
+    UCSRC = _BV(URSEL) | _BV(USBS) | _BV(UCSZ1) | _BV(UCSZ0); //8 bits of data, 2 stop bits
     UCSRB = _BV(RXEN) | _BV(TXEN); //Enabling reciver and transmitter
 }
 
