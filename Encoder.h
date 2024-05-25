@@ -1,6 +1,9 @@
-//Functions for operating the encoder (without encoder switch)
-
+//Functions and macros for setup and operating rotary encoder
 #include <avr/io.h>
+#include <util/delay.h>
+
+//Time in miliseconds that must past to read the encoder state again (it should be not longer than 255 ms because it is stored as uint8_t type)
+#define IGNORE_TIME 5
 
 //Default connection of encoder
 #define ENCODER_A PB0
