@@ -12,7 +12,6 @@
 #define ENCODER_PORT PORTB
 #define ENCODER_PIN PINB
 
-inline uint8_t decode(uint8_t grays_code);
 //Initializtion of encoder (should be placed later in code for prevent overwrite)
 void Encoder_init(void){
 	ENCODER_DDR &= ~(_BV(ENCODER_A) | _BV(ENCODER_B)); //Setting pins as inputs
